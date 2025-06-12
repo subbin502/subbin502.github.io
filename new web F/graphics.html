@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D Work - DXD.CU</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="graphics-style.css" />
+</head>
+<body>
+  <header>
+    <nav class="nav-left">
+      <a href="index.html">🏠HOME</a>
+      <a href="#" id="workBtn">🖥️WORK</a>
+      <div class="work-modal" id="workModal">
+        <div class="modal-content">
+          <h2>Select a Category</h2>
+          <ul>
+            <li><a href="3D.html">3D</a></li>
+            <li><a href="animate.html">Animate</a></li>
+            <li><a href="graphics.html">Graphics</a></li>
+            <li><a href="students.html">Students' Association</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="logo">DXD.CU</div>
+    <nav class="nav-right">
+      <a href="https://www.youtube.com/@DXDesign25" target="_blank">💌YOUTUBE</a>
+      <a href="https://www.instagram.com/shunoumi/" target="_blank">👩🏻INSTAGRAM</a>
+    </nav>
+  </header>
+
+  <section class="page-section three-d-flex">
+    <div class="three-d-image">
+      <img src="24.png" alt="24 이미지" />
+    </div>
+
+    <div class="three-d-text">
+      <h2>Document Redesign</h2>
+      <p class="bold">
+        보기 어렵고 불편했던 공문서들... 이제는 안녕이다
+      </p>
+
+      <p>
+        <br />/
+        <br />
+        역사상 처음으로 어머니의 도움을 받았던 과제라 다른 의미로 기억에 많이 남는 과제입니다.
+        <br />
+        공문서를 리디자인하며 위계와 레이아웃 설정에 대한 고민을 다시금 하며 좀 더 성장한 것 같기도 합니다.
+        <br />
+        난생처음 들어보는 단어들, 설명을 들어도 모르겠는 어려운 말들을 해석하는 과제는 아니지만
+        <br />
+        그것들을 좀 더 찾고, 알아보기 쉽게 만드는 재밌는 과제였습니다.
+      </p>
+    </div>
+  </section>
+  <script>
+    const workBtn = document.getElementById('workBtn');
+    const workModal = document.getElementById('workModal');
+    const closeBtn = document.querySelector('.close-btn');
+  
+    workBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      workModal.style.display = 'flex';
+    });
+  
+    function closeModal() {
+      workModal.style.display = 'none';
+    }
+  
+    window.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  
+    workModal.addEventListener('click', function (e) {
+      if (e.target === workModal) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

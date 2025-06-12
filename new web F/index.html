@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>AND - Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="nav-left">
+      <a href="#"> 🏠HOME</a>
+      <a href="#" id="workBtn"> 🖥️WORK</a>
+    </nav>
+
+    <div class="work-modal" id="workModal">
+        <div class="modal-content">
+          <h2>Select a Category</h2>
+          <ul>
+            <li><a href="3d.html">3D</a></li>
+            <li><a href="animate.html">Animate</a></li>
+            <li><a href="graphics.html">Graphics</a></li>
+            <li><a href="students.html">Students' Association</a></li>
+          </ul>
+        </div>
+      </div>
+
+    <div class="logo">DXD.CU</div>
+    <nav class="nav-right">
+        <a href="https://www.youtube.com/@DXDesign25" target="_blank">💌YOUTUBE</a>
+        <a href="https://www.instagram.com/shunoumi/" target="_blank">👩🏻INSTAGRAM</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="아트보드4.png" alt="Profile Image" class="hero-image" />
+    <h1 class="name-ko">조수빈</h1>
+    <h2 class="name-en">CHO SU BIN</h2>
+  </section>
+
+  <section class="introduction">
+    <div class="intro-head">
+      <h3>Introduction</h3>
+      <p>CHO SU BIN | 05 MAY 2005</p>
+    </div>
+    <div class="intro-body">
+      <p>
+        재능은 꽃피우는 것, 센스는 갈고닦는 것
+        <br>-
+        <br>내가 가진 재능을 발견하여 아름다운 꽃을 피워내는 것,
+        <br>현재의 내가 가진 최선의 센스를 연마하는 디자이너가 될 조수빈입니다.
+      </p>
+      <p>
+        2024/1 | 기초디지털조형 - 우수작 / 디지털 타입페이스 - 노력작
+       <br> 2024/2 | 타입페이스와 뉴미디어 - 우수작
+       <br>
+       <br>
+       제 37대 총학생회 'FLASH' 홍보부원
+       <br> 제 38대 총학생회 'BLUE' 홍보차장장
+      </p>
+    </div>
+  </section>
+
+  <section class="bottom-images">
+    <img src="레이어7.png" alt="Left" class="bottom-img small-img" />
+    <img src="레이어6.jpeg" alt="Right" class="bottom-img" />
+  </section>
+
+  <script>
+    const workBtn = document.getElementById('workBtn');
+    const workModal = document.getElementById('workModal');
+    const closeBtn = document.querySelector('.close-btn');
+  
+    workBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      workModal.style.display = 'flex';
+    });
+  
+    function closeModal() {
+      workModal.style.display = 'none';
+    }
+  
+    window.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+
+    workModal.addEventListener('click', function (e) {
+      if (e.target === workModal) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

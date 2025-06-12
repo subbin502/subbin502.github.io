@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D Work - DXD.CU</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="3D-style.css" />
+</head>
+<body>
+  <header>
+    <nav class="nav-left">
+      <a href="index.html">🏠HOME</a>
+      <a href="#" id="workBtn">🖥️WORK</a>
+      <div class="work-modal" id="workModal">
+        <div class="modal-content">
+          <h2>Select a Category</h2>
+          <ul>
+            <li><a href="3D.html">3D</a></li>
+            <li><a href="animate.html">Animate</a></li>
+            <li><a href="graphics.html">Graphics</a></li>
+            <li><a href="students.html">Students' Association</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="logo">DXD.CU</div>
+    <nav class="nav-right">
+      <a href="https://www.youtube.com/@DXDesign25" target="_blank">💌YOUTUBE</a>
+      <a href="https://www.instagram.com/shunoumi/" target="_blank">👩🏻INSTAGRAM</a>
+    </nav>
+  </header>
+
+  <section class="page-section three-d-flex">
+    <div class="three-d-image">
+      <img src="3D.png" alt="3D 이미지" />
+    </div>
+
+    <div class="three-d-text">
+      <h2>青緑</h2>
+      <p class="bold">
+        비 갠 뒤 무지개가 뜬 날, 적당히 따뜻하고 시원한 날, 한여름의 어느 날<br />
+        어디든 좋으니 나가고 싶은 그런 날을 생각하며 그렸던<br />
+        꿈의 장소를 이번 중간 과제에 구현해 보았습니다. 청록의 향기를 즐겨보세요.
+      </p>
+
+      <p>
+        <br />/
+        <br />
+        이번 중간 과제는 저의 첫 대규모라 할 수 있는 프로젝트였습니다.
+        <br />
+        Blender라는 툴을 사용한지 막 2개월이 넘었을 때, 아이디어 기획부터 실행하는 모든 과정을
+        <br />
+        저 혼자서 해내는 경험을 가질 수 있는 소중하고 중요한 기간이었습니다.
+        <br />
+        아직은 미숙한 실력이라도 점차 발전할 저의 가능성을 기대해 주세요!
+      </p>
+    </div>
+  </section>
+  <script>
+    const workBtn = document.getElementById('workBtn');
+    const workModal = document.getElementById('workModal');
+    const closeBtn = document.querySelector('.close-btn');
+  
+    workBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      workModal.style.display = 'flex';
+    });
+  
+    function closeModal() {
+      workModal.style.display = 'none';
+    }
+  
+    window.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  
+    workModal.addEventListener('click', function (e) {
+      if (e.target === workModal) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
