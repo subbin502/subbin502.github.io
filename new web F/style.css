@@ -45,7 +45,13 @@
     margin: 40px auto 10px;
     display: block;
   }
-  
+
+.hero>div{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+
   .name-ko {
     font-size: 22px;
     color: #e14100;
