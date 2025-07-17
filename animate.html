@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Animate Work - DXD.CU</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="animate-style.css" />
+</head>
+<body>
+  <header>
+    <nav class="nav-left">
+      <a href="index.html">🏠HOME</a>
+      <a href="#" id="workBtn">🖥️WORK</a>
+      <div class="work-modal" id="workModal">
+        <div class="modal-content">
+          <h2>Select a Category</h2>
+          <ul>
+            <li><a href="3D.html">3D</a></li>
+            <li><a href="animate.html">Animate</a></li>
+            <li><a href="graphics.html">Graphics</a></li>
+            <li><a href="students.html">Students' Association</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="logo">DXD.CU</div>
+    <nav class="nav-right">
+      <a href="https://www.youtube.com/@DXDesign25" target="_blank">💌YOUTUBE</a>
+      <a href="https://www.instagram.com/shunoumi/" target="_blank">👩🏻INSTAGRAM</a>
+    </nav>
+  </header>
+
+  <section class="page-section three-d-flex">
+    <div class="three-d-image">
+      <video controls class="main-image">
+        <source src="DA.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="three-d-text">
+      <h2>Sunday Pudding</h2>
+      <p class="bold">
+        인생 첫 일본 여행에서 먹은 선데이 푸딩 파르페는 정말 맛이 없었지만<br />
+        추억에 의한 보정은 아직도 입안을 달달하게 만들어 줍니다.<br />
+        여러분들은 꼭 맛있는 선데이 파르페를 드세요,,
+      </p>
+
+      <p>
+        <br />/
+        <br />
+        애니메이트는 이전에도 배운 기능이지만 그때 배우지 못했던 
+        <br />
+        다른 많은 기능을 배우는 과정이 굉장히 즐거웠어서
+        <br />
+        이 정도로 재밌게 과제를 해본 적이 처음이었습니다. 
+        <br />
+        앞으로 이런 감정을 또 느낄 수 있겠죠,,? 흠
+      </p>
+    </div>
+  </section>
+
+  <script>
+    const workBtn = document.getElementById('workBtn');
+    const workModal = document.getElementById('workModal');
+
+    workBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      workModal.style.display = 'flex';
+    });
+
+    function closeModal() {
+      workModal.style.display = 'none';
+    }
+
+    window.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+
+    workModal.addEventListener('click', function (e) {
+      if (e.target === workModal) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

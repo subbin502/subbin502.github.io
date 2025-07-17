@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D Work - DXD.CU</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="students-style.css" />
+</head>
+<body>
+  <header>
+    <nav class="nav-left">
+      <a href="index.html">🏠HOME</a>
+      <a href="#" id="workBtn">🖥️WORK</a>
+      <div class="work-modal" id="workModal">
+        <div class="modal-content">
+          <h2>Select a Category</h2>
+          <ul>
+            <li><a href="3D.html">3D</a></li>
+            <li><a href="animate.html">Animate</a></li>
+            <li><a href="graphics.html">Graphics</a></li>
+            <li><a href="students.html">Students' Association</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="logo">DXD.CU</div>
+    <nav class="nav-right">
+      <a href="https://www.youtube.com/@DXDesign25" target="_blank">💌YOUTUBE</a>
+      <a href="https://www.instagram.com/shunoumi/" target="_blank">👩🏻INSTAGRAM</a>
+    </nav>
+  </header>
+
+  <section class="page-section three-d-flex">
+    <div class="three-d-image">
+      <img src="라인업1.png" alt="라인업 이미지" />
+    </div>
+
+    <div class="three-d-text">
+      <h2>Blueming</h2>
+      <p class="bold">
+        푸르른 순간, 피어난 청춘들의 이야기
+      </p>
+      <p>
+        <br />/
+        <br>
+        저희 학교의 첫 대운동장 대동제인 ‘Blueming’의 라인업 포스터를 제작하였습니다. 
+        <br />
+        이렇게 많은 다수에게 저의 포스터가 보여지는 적이 처음이라 굉장히 긴장도 되고 반응이 안 좋으면 어떡하지?
+        <br />
+        라는 걱정도 했는데, 주변의 반응이 다 좋아서 마지막을 좋게 장식한 기분이 들었습니다.
+        <br />
+        바쁘기도 엄청 바빴지만,  엄청 행복하기도 했던 저의 두 번째 축제 준비였습니다.
+      </p>
+    </div>
+  </section>
+  <script>
+    const workBtn = document.getElementById('workBtn');
+    const workModal = document.getElementById('workModal');
+    const closeBtn = document.querySelector('.close-btn');
+  
+    workBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      workModal.style.display = 'flex';
+    });
+  
+    function closeModal() {
+      workModal.style.display = 'none';
+    }
+  
+    window.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  
+    workModal.addEventListener('click', function (e) {
+      if (e.target === workModal) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

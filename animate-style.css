@@ -1,0 +1,63 @@
+.main-image {
+    width: 800px;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin-left: 30%;
+    margin-right: auto; 
+    margin-top: 10%
+  }
+
+  .three-d-section {
+    padding: 60px 100px;
+    background-color: #ffffff;
+  }
+  
+  .three-d-flex {
+  display: flex;
+  gap: 200px;
+  padding: 70px 72px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* 화면 작을 때 아래로 떨어지게 */
+}
+
+
+.three-d-image img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+  margin-right: auto;
+  margin-left: 30%;
+}
+
+.three-d-text {
+  min-width: 300px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: 13%;
+  margin-top: 4%;
+}
+
+.three-d-text h2 {
+  font-size: 28px;
+  color: #C90040;
+  margin-bottom: 50px;
+}
+
+.three-d-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.three-d-text .bold {
+  font-weight: bold;
+  color: #333;
+}
+  
+  /* 제목도 스타일링하고 싶다면 */
+  .page-section h1 {
+    color: #336021;
+  }

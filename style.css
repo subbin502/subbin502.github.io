@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    font-size: 17px;
+  }
+  
+  .nav-left a,
+  .nav-right a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #e14100;
+    margin-left: 85px;
+  }
+  
+  /* 프로필 */
+  .hero {
+    position: relative;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-image {
+    width: 380px;  
+    height: auto;
+    margin: 40px auto 10px;
+    display: block;
+  }
+  .hero>div{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    /* left: 50%;
+    transform: translate(-50%); */
+  }
+  .name-ko {
+    font-size: 22px;
+    color: #e14100;
+  }
+  
+  .name-en {
+    font-size: 14px;
+    color: #e14100;
+  }
+  
+  /* 자기 소개개 */
+  .introduction {
+    background-color: #e14100;
+    color: white;
+    padding: 40px 80px;
+  }
+  
+  .intro-head h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .intro-body {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  
+  .intro-body p {
+    width: 50%;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  
+  /* 밑에에 이미지 2개 */
+  .bottom-images {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .bottom-img {
+    flex: 1;
+    width: 300px;
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .small-img {
+    width: 400px;   
+    height: 600;    
+    flex: 0 0 auto;     
+  }
+
+  .work-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* ✅ 어두운 반투명 배경 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* 모달 내부 박스 */
+  .modal-content {
+    background-color: white; /* ✅ 흰 배경 박스 */
+    color: #e14100;          /* ✅ 글씨색 적용 */
+    padding: 40px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 내부 링크 목록 */
+  .modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .modal-content li {
+    margin: 15px 0;
+    font-size: 18px;
+  }
+  
+  .modal-content a {
+    text-decoration: none;
+    color: #336021;
+    font-weight: bold;
+  }
